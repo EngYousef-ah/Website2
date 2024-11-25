@@ -102,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
                 <div class="col-sm-3 d-grid">
-                    <a href="/web2-p1/index.php" class="btn btn-outline-primary" role="button">Cancel</a>
+                    <a href="./index.php" class="btn btn-outline-primary" role="button">Cancel</a>
                 </div>
             </div>
         </form>
