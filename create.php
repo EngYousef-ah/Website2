@@ -1,7 +1,7 @@
 <?php
 include 'db_connection.php';
 if ( empty($_COOKIE['user'])) {
-    header("Location: /WEB2-p2/login.php");
+    header("Location: ./login.php");
     exit;
 }
 $stmt2 = $conn->prepare('SELECT id FROM users WHERE username = ?');
