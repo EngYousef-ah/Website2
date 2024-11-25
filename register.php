@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $stmt->bindParam(':password', $password);
             $stmt->bindParam(':confirm_password', $confirm_password);
             $stmt->execute();
-            header("location:/WEB2-p2/login.php");
+            header("location:./login.php");
         }
     } catch (PDOException $e) {
         $email_error = $e->getMessage();
