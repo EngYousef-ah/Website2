@@ -1,22 +1,22 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$database = "web2p2";
+$username = "php_user";
+$password = "password";
+$database = "students";
 //create connection with my database.
 $connection = new mysqli($servername, $username, $password, $database);
 $id = $name = $email = $phone = $address = "";
 $errorMessage = $successMessage = "";
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     if (!isset($_GET["id"])) {
-        header("location: /web2-p2/index.php");
+        header("location: ./index.php");
     }
     $id = $_GET["id"];
     $sql = "SELECT * FROM clients WHERE id='$id' ";
     $result = $connection->query($sql);
     $row = $result->fetch_assoc();
     if (!$row) {
-        header("location: /web2-p2/index.php");
+        header("location: ./index.php");
     }
     $name = $row["name"];
     $email = $row["email"];
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             break;
         }
         $successMessage = "Student added correctly";
-        header("location: /web2-p2/index.php");
+        header("location: ./index.php");
         exit;
     } while (false);
 }
