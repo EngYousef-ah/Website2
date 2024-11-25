@@ -6,5 +6,5 @@ if (isset($_GET["id"])) {
     $sql = "DELETE FROM clients WHERE id=$id ";
     $conn->query($sql);
 }
-header("location: /web2-p2/index.php");
+header("location: ./index.php");
 exit;
