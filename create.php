@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             break;
         }
         $successMessage = "Client added successfully.";
-        header("Location: /WEB2-p2/index.php");
+        header("Location: ./index.php");
         exit;
     } while (false);
 }
